@@ -4,7 +4,8 @@ class BitcoinsController < ApplicationController
     # add backend code
     # render bitcoins/index view
 
-    bitcoin = 1.0
+    #set a variable linked to an input from the query string
+    bitcoin = params["amount"]
 
     # connect to the Coindesk API
     # DON'T CHANGE THIS CODE
