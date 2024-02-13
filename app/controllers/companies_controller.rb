@@ -26,16 +26,31 @@ def show
 end
 
 
-  # def new
+def new
+# def new
   #   # render view with new Company form
   # end
 
-  # def create
-  #   # start with a new Company
-  #   # assign user-entered form data to Company's columns
-  #   # save Company row
-  #   # redirect user
-  # end
+end
+
+
+def create
+#create new row
+@company = Company.new
+#by looking at the hash data from input, we can put names from form
+@company["name"]=params["name"]
+@company["city"]=params["city"]
+@company["state"]=params["state"]
+#save inputs in table
+@company.save
+
+#redirect user to other
+redirect_to "/companies"
+
+end
+
+
+
 
   # def edit
   #   # find a Company
